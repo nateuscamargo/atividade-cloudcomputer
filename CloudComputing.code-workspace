@@ -1,9 +1,10 @@
-{
-	"folders": [
-		{
-			"uri": "vscode-remote://codespaces+cautious-giggle-x5rxxgq9v9j539qg5/workspaces/CloudComputing"
-		}
-	],
-	"remoteAuthority": "codespaces+cautious-giggle-x5rxxgq9v9j539qg5",
-	"settings": {}
-}
+const http = require('http');
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Hello World\n');
+});
+
+server.listen(3000, () => {
+    console.log('Server running at http://localhost:3000/');
+});
